@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-#npx lerna run --concurrency 1 --stream precommit --since HEAD --exclude-dependents
-echo "This will be initiialized on the next commit"
+npx lerna run --concurrency 1 --stream precommit --since HEAD --exclude-dependents

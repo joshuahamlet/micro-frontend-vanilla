@@ -13,8 +13,14 @@
   },
   "devDependencies": {
     "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.0",
     "lerna": "^5.4.3",
     "nx": "^14.5.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
