@@ -1,8 +1,11 @@
 import { lazy, Suspense } from "react";
 import { AppShell, Header, Navbar, Title } from "@mantine/core";
 
-const RemoteApp2 = lazy(() => import("second/App"));
-const RemoteApp1 = lazy(() => import("first/App"));
+import App2 from "second/App2"
+//import App1 from 'first/App'
+
+const RemoteApp2 = lazy(() => import("second/App2"));
+const RemoteApp1 = lazy(() => import("first/App1"));
 
 const deps = require("../package.json").dependencies;
 console.log(deps);
@@ -15,6 +18,7 @@ const App = () => {
         header={
           <Header height={100} p="xs">
             <Title>HOST</Title>
+            <App2></App2>
           </Header>
         }
         navbar={

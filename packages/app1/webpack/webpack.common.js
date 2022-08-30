@@ -42,7 +42,7 @@ module.exports = {
       name: 'first',
       filename: 'remoteEntry.js',
       exposes: {
-        './App': './src/App',
+        './App1': './src/App1.tsx',
       },
       // shared: [
       //   {

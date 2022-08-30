@@ -8,7 +8,7 @@
     "test": "jest",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
     "serve": "serve dist",
-    "precommit": "echo placeholder for now ;)"
+    "precommit": "echo running @app/first pre-commit && npx prettier -w src/*"
   },
   "keywords": [],
   "author": "",

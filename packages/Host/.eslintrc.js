@@ -17,15 +17,19 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/typescript',
     'plugin:jsx-a11y/recommended',
-    'plugin:eslint-comments/recommended'
+    'plugin:eslint-comments/recommended',
+    'eslint-plugin-prettier'
   ],
+  ignorePatterns: ['node_modules/', 'build/', 'coverage/'],
   rules: {
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': ['error'],
-    '@typescript-eslint/no-var-requires': 'off',
     'react/prop-types': 'off',
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-unused-vars': ['error'],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    "quotes": [2, "single", { "avoidEscape": true }],
+    "prettier/prettier": "error"
   },
 }

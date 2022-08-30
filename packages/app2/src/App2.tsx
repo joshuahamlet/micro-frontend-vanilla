@@ -45,7 +45,7 @@ const ExampleCard = () => {
   )
 }
 
-const App: React.FC<Props> = ({ standalone }: Props) => {
+const App2: React.FC<Props> = ({ standalone }: Props) => {
   return (
     <div>
       {standalone && (
@@ -89,4 +89,4 @@ const App: React.FC<Props> = ({ standalone }: Props) => {
   )
 }
 
-export default App
+export default App2

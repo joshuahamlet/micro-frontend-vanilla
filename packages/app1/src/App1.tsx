@@ -1,10 +1,7 @@
-import { useState } from "react"
-import { Button, Card, Center, Header, Stack, Title, Image, Text, Group, Badge } from '@mantine/core';
-import Shell from './Shell'
+import { Button, Card, Center, Header, Stack, Title, Image, Text, Group, Badge } from '@mantine/core'
 
 type Props = {
   standalone?: boolean,
-  children?: React.ReactNode
 }
 
 const ExampleCard = () => {
@@ -37,21 +34,14 @@ const ExampleCard = () => {
   )
 }
 
-const App: React.FC = ({ children, standalone }: Props) => {
+const App1: React.FC<Props> = ({ standalone }: Props) => {
 
-  const [example, setExample] = useState("")
-
-  const errorThrower = () => {
-    // try{
-    //   fakeFunk()
-    // } catch (error) {
-    //   console.error(error)
-    // }
-    setExample("wee")
-    console.log("gloop")
-    console.log(example)
-    fakeFunk()
-  }
+  // const errorThrower = () => {
+  //   setExample("wee")
+  //   console.log("gloop")
+  //   console.log(example)
+  //   fakeFunk()
+  // }
 
   return (
     <div>
@@ -86,4 +76,4 @@ const App: React.FC = ({ children, standalone }: Props) => {
   )
 }
 
-export default App
+export default App1

@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
     "serve": "serve dist",
-    "precommit": "echo placeholder for now ;)"
+    "precommit": "echo running @app/host pre-commit && npx prettier -w src/*"
   },
   "keywords": [],
   "author": "",
