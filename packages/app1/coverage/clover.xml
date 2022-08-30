@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1661722048233" clover="3.2.0">
+  <project timestamp="1661722048233" name="All files">
+    <metrics statements="14" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="7" coveredmethods="2" elements="25" coveredelements="6" complexity="0" loc="14" ncloc="14" packages="2" files="4" classes="4"/>
+    <package name="src">
+      <metrics statements="10" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="Shell.tsx" path="C:\Users\josh\Desktop\micro-frontend-vanilla\packages\app1\src\Shell.tsx">
+        <metrics statements="8" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+      </file>
+      <file name="index.tsx" path="C:\Users\josh\Desktop\micro-frontend-vanilla\packages\app1\src\index.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="Hello.tsx" path="C:\Users\josh\Desktop\micro-frontend-vanilla\packages\app1\src\components\Hello.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+      <file name="sum.ts" path="C:\Users\josh\Desktop\micro-frontend-vanilla\packages\app1\src\components\sum.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
