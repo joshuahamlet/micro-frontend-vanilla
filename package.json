@@ -1,4 +1,4 @@
-{
+  {
   "name": "micro-frontend-vanilla",
   "workspaces": [
     "packages/*"
@@ -13,10 +13,12 @@
   },
   "devDependencies": {
     "commitizen": "^4.2.5",
+    "cypress": "^10.7.0",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.0",
     "lerna": "^5.4.3",
-    "nx": "^14.5.7"
+    "nx": "^14.5.7",
+    "typescript": "^4.8.2"
   },
   "config": {
     "commitizen": {

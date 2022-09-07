@@ -18,7 +18,6 @@ const App = () => {
         header={
           <Header height={100} p="xs">
             <Title>HOST</Title>
-            <App2></App2>
           </Header>
         }
         navbar={
