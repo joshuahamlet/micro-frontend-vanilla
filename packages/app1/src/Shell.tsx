@@ -1,11 +1,23 @@
-import { AppShell, Navbar, Header, Center, Stack, Card, Image, Group, Text, Button, Badge, Title } from '@mantine/core';
+import {
+  AppShell,
+  Navbar,
+  Header,
+  Center,
+  Stack,
+  Card,
+  Image,
+  Group,
+  Text,
+  Button,
+  Badge,
+  Title,
+} from '@mantine/core'
 
 type Props = {
   children?: React.ReactNode
 }
 
 const Shell: React.FC = ({ children }: Props) => {
-
   const ExampleCard = () => {
     return (
       <Card shadow="sm" p="md" radius="md" withBorder>
@@ -25,8 +37,8 @@ const Shell: React.FC = ({ children }: Props) => {
         </Group>
 
         <Text size="sm" color="dimmed">
-          With Fjord Tours you can explore more of the magical fjord landscapes with tours and
-          activities on and around the fjords of Norway
+          With Fjord Tours you can explore more of the magical fjord landscapes
+          with tours and activities on and around the fjords of Norway
         </Text>
 
         <Button variant="light" color="blue" fullWidth mt="md" radius="md">
@@ -42,21 +54,32 @@ const Shell: React.FC = ({ children }: Props) => {
         height="auto"
         p="xs"
         styles={(theme) => ({
-          main: { backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0] }
+          main: {
+            backgroundColor:
+              theme.colorScheme === 'dark'
+                ? theme.colors.dark[8]
+                : theme.colors.gray[0],
+          },
         })}
       >
         <Center>
-          <Title variant='gradient'gradient={{ from: 'indigo', to: 'cyan', deg: 45 }}>
+          <Title
+            variant="gradient"
+            gradient={{ from: 'indigo', to: 'cyan', deg: 45 }}
+          >
             App1
           </Title>
         </Center>
       </Header>
       <Stack
-        align='center'
+        align="center"
         sx={(theme) => ({
-          backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
-          height: "100vh",
-          width: "100%"
+          backgroundColor:
+            theme.colorScheme === 'dark'
+              ? theme.colors.dark[8]
+              : theme.colors.gray[0],
+          height: '100vh',
+          width: '100%',
         })}
       >
         {children}
@@ -64,7 +87,7 @@ const Shell: React.FC = ({ children }: Props) => {
         <ExampleCard />
       </Stack>
     </>
-  );
+  )
 }
 
 export default Shell

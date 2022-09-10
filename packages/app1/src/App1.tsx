@@ -1,7 +1,18 @@
-import { Button, Card, Center, Header, Stack, Title, Image, Text, Group, Badge } from '@mantine/core'
+import {
+  Button,
+  Card,
+  Center,
+  Header,
+  Stack,
+  Title,
+  Image,
+  Text,
+  Group,
+  Badge,
+} from '@mantine/core'
 
 type Props = {
-  standalone?: boolean,
+  standalone?: boolean
 }
 
 const ExampleCard = () => {
@@ -23,8 +34,8 @@ const ExampleCard = () => {
       </Group>
 
       <Text size="sm" color="dimmed">
-        With Fjord Tours you can explore more of the magical fjord landscapes with tours and
-        activities on and around the fjords of Norway
+        With Fjord Tours you can explore more of the magical fjord landscapes
+        with tours and activities on and around the fjords of Norway
       </Text>
 
       <Button variant="light" color="blue" fullWidth mt="md" radius="md">
@@ -35,7 +46,6 @@ const ExampleCard = () => {
 }
 
 const App1: React.FC<Props> = ({ standalone }: Props) => {
-
   // const errorThrower = () => {
   //   setExample("wee")
   //   console.log("gloop")
@@ -50,23 +60,33 @@ const App1: React.FC<Props> = ({ standalone }: Props) => {
           height="auto"
           p="xs"
           styles={(theme) => ({
-            main: { backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0] }
+            main: {
+              backgroundColor:
+                theme.colorScheme === 'dark'
+                  ? theme.colors.dark[8]
+                  : theme.colors.gray[0],
+            },
           })}
         >
           <Center>
-            <Title variant='gradient' gradient={{ from: 'red', to: 'cyan', deg: 45 }}>
+            <Title
+              variant="gradient"
+              gradient={{ from: 'red', to: 'cyan', deg: 45 }}
+            >
               App1
             </Title>
           </Center>
         </Header>
-      )
-      }
+      )}
       <Stack
-        align='center'
+        align="center"
         sx={(theme) => ({
-          backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
-          height: standalone ? "100vh" : "100%",
-          width: "100%"
+          backgroundColor:
+            theme.colorScheme === 'dark'
+              ? theme.colors.dark[8]
+              : theme.colors.gray[0],
+          height: standalone ? '100vh' : '100%',
+          width: '100%',
         })}
       >
         <ExampleCard />
