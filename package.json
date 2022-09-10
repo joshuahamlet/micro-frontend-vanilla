@@ -1,4 +1,4 @@
-  {
+{
   "name": "micro-frontend-vanilla",
   "workspaces": [
     "packages/*"
@@ -9,9 +9,11 @@
     "build": "lerna run --scope @app/* build",
     "serve": "lerna run --scope @app/* --parallel serve",
     "clean": "lerna run --scope @app/* --parallel clean",
+    "e2e": "npx cypress run --spec './packages/*/e2e/*.cy.{js,jsx,ts,tsx}'",
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.3",
     "commitizen": "^4.2.5",
     "cypress": "^10.7.0",
     "cz-conventional-changelog": "^3.3.0",
