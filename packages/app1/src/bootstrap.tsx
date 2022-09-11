@@ -2,6 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { MantineProvider } from '@mantine/core'
 import { createClient } from 'contentful'
+import { QueryClientProvider, QueryClient } from 'react-query'
+
+const queryClient = new QueryClient()
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE!,
@@ -22,13 +25,14 @@ const rootElement = document.getElementById('root')
 const root = ReactDOM.createRoot(rootElement as HTMLElement)
 root.render(
   <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
     <MantineProvider
       theme={{ colorScheme: 'dark' }}
       withGlobalStyles
       withNormalizeCSS
-      children
     >
       <App1 standalone />
     </MantineProvider>
+    </QueryClientProvider>
   </React.StrictMode>
 )
