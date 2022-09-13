@@ -1,57 +1,28 @@
-import {
-  Button,
-  Card,
-  Center,
-  Header,
-  Stack,
-  Title,
-  Image,
-  Text,
-  Group,
-  Badge,
-} from '@mantine/core'
+import { Center, Header, Stack, Title } from '@mantine/core'
+import { useEffect } from 'react'
+import { useQuery } from 'react-query'
+
+import ExampleCard from './components/ExampleCard'
+import { contentfulClient } from './contentful'
 
 type Props = {
   standalone?: boolean
 }
 
-const ExampleCard = () => {
-  return (
-    <Card shadow="sm" p="md" radius="md" withBorder>
-      <Card.Section>
-        <Image
-          src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
-          height={160}
-          alt="Norway"
-        />
-      </Card.Section>
-
-      <Group position="apart" mt="md" mb="xs">
-        <Text weight={500}>Norway Fjord Adventures</Text>
-        <Badge color="pink" variant="light">
-          On Sale
-        </Badge>
-      </Group>
-
-      <Text size="sm" color="dimmed">
-        With Fjord Tours you can explore more of the magical fjord landscapes
-        with tours and activities on and around the fjords of Norway
-      </Text>
-
-      <Button variant="light" color="blue" fullWidth mt="md" radius="md">
-        Book classic tour now
-      </Button>
-    </Card>
-  )
-}
-
 const App1: React.FC<Props> = ({ standalone }: Props) => {
-  // const errorThrower = () => {
-  //   setExample("wee")
-  //   console.log("gloop")
-  //   console.log(example)
-  //   fakeFunk()
-  // }
+  const fetchContentful = async () => {
+    const res = await contentfulClient.getEntries({ content_type: 'product' })
+    return res
+  }
+
+  const { data, isLoading, isError } = useQuery(
+    'contentful-data',
+    fetchContentful
+  )
+
+  useEffect(() => {
+    console.log(data)
+  }, [data])
 
   return (
     <div>
@@ -91,6 +62,11 @@ const App1: React.FC<Props> = ({ standalone }: Props) => {
       >
         <ExampleCard />
         <ExampleCard />
+        {isLoading && <div>Loading...</div>}
+        {!isLoading &&
+          data?.items.map((item) => (
+            <div key={item.sys.id}>{item.fields.name}</div>
+          ))}
       </Stack>
     </div>
   )

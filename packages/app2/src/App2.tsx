@@ -1,17 +1,11 @@
 import {
-  Button,
-  Card,
   Center,
   Header,
   Stack,
   Title,
-  Image,
-  Text,
-  Group,
-  Badge,
 } from '@mantine/core'
 
-import ExampleCard from "./components/ExampleCard"
+import ExampleCard from './components/ExampleCard'
 
 type Props = {
   standalone?: boolean
